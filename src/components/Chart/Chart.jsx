@@ -15,7 +15,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
     fetchAPI();
   }, []);
 
-  const lineChart = dailyData == undefined ? undefined : null;
+  const lineChart = dailyData === undefined ? undefined : null;
   // const lineChart =
   //   dailyData.length !== 0 ? (
   //     <Line
