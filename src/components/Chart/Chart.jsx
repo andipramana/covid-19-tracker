@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { fetchDailyData } from "../../api";
+import React, {  } from "react";
+// import { fetchDailyData } from "../../api";
 import { Bar } from "react-chartjs-2";
 
 import styles from "./Chart.module.css";
 
 const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
-  const [dailyData, setDailyData] = useState([]);
+  // const [dailyData, setDailyData] = useState([]);
 
-  useEffect(() => {
-    const fetchAPI = async () => {
-      setDailyData(await fetchDailyData());
-    };
+  // useEffect(() => {
+  //   const fetchAPI = async () => {
+  //     setDailyData(await fetchDailyData());
+  //   };
 
-    fetchAPI();
-  }, []);
+  //   fetchAPI();
+  // }, []);
 
-  const lineChart = dailyData === undefined ? undefined : null;
+  // const lineChart = dailyData === undefined ? undefined : null;
   // const lineChart =
   //   dailyData.length !== 0 ? (
   //     <Line
@@ -65,7 +65,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   ) : null;
 
   return (
-    <div className={styles.container}>{country ? barChart : lineChart}</div>
+    <div className={styles.container}>{country ? barChart : null}</div>
   );
 };
 
